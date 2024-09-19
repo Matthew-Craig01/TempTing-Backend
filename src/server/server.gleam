@@ -15,7 +15,7 @@ pub fn start() {
   let assert Ok(_) =
     mist_handler(handle_request(_, conn), secret_key)
     |> mist.new
-    |> mist.port(8000)
+    |> mist.port(80)
     |> mist.start_http
   sleep_forever()
 }
