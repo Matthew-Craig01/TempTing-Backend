@@ -1,6 +1,6 @@
 % Taken from https://stackoverflow.com/questions/41777852/erlang-return-time-in-utc-format
 
--module(ffi).
+-module(my_ffi).
 -export([format_iso8601/0]).
 
 format_iso8601() ->
