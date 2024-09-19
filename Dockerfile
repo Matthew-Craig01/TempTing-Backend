@@ -1,11 +1,15 @@
 FROM ghcr.io/gleam-lang/gleam:v1.3.2-erlang-alpine
 
 # Install build dependencies
-RUN apk add --no-cache gcc musl-dev make
+RUN apk add --no-cache gcc musl-dev make wget sqlite sqlite-dev
 
 WORKDIR /build
 
 COPY . /build
+
+# Create DB
+RUN chmod +x /build/create_db.sh
+RUN /build/create_db.sh
 
 # Compile the project
 RUN cd /build \
