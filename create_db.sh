@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DB_FILE="temp_ting.db"
 
